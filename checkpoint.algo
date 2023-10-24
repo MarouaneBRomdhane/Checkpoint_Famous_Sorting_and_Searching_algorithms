@@ -1,6 +1,6 @@
 
 
-FUNCTION Insertion_sort (arr: ARRAY_OF INTEGER[50]) : array_name : ARRAY_OF type[length]; // i din't know what the output infor of the array should be 
+FUNCTION Insertion_sort (arr: ARRAY_OF INTEGER[50]) : ARRAY_OF INTEGER[50]; // i din't know what the output infor of the array should be 
 VAR
     i, j: INTEGER;
     key : ARRAY_OF type[50];
