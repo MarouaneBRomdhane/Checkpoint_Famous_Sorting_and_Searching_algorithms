@@ -1,0 +1,29 @@
+
+
+FUNCTION Insertion_sort (arr: ARRAY_OF INTEGER[50]) : array_name : ARRAY_OF type[length]; // i din't know what the output infor of the array should be 
+VAR
+    i, j: INTEGER;
+    key : ARRAY_OF type[50];
+BEGIN
+    FOR i FROM 1 TO arr.length-1 STEP 1  DO
+        key := arr[i];
+         j := i - 1;
+            // Move elements of arr[0..i-1], that are greater than key,
+            // to one position ahead of their current position
+        WHILE (j >= 0 and key < arr[j]:) DO
+            arr[j + 1] := arr[j];
+            j := j- 1;
+            // Insert the key into its correct position
+            arr[j + 1] := key;
+        END_WHILE
+    END_FOR
+    RETURN arr ;
+END
+ALGORITHM checkpoint_solution
+VAR
+    arr: ARRAY_OF INTEGER[50];
+BEGIN
+    arr := {12, 11, 13, 5, 6};
+    arr := insertion_sort(arr);
+    Write("Sorted array is:", arr);
+END
